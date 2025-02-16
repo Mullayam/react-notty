@@ -1,18 +1,23 @@
 {
   "name": "react-notty",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
+  "description": "A lightweight toast notification library with promise support and positioning",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsup src/index.ts --format esm,cjs --dts --out-dir dist",    
+    "dev": "vite",     
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
     "lucide-react": "^0.475.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "tsup": "^8.3.6"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",
